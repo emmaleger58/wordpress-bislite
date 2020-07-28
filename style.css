@@ -1,0 +1,243 @@
+/*
+Theme Name :Mon theme
+*/
+
+
+@media (max-width: 992px){
+
+/*body-section-carousel*/
+  ol.carousel-indicators{
+      display: none;
+  }
+
+/*body-section-carousel*/
+
+
+
+/*body-section-card*/
+  p.lead{
+    font-size: 0.8rem;
+  }
+  h6.card-title{
+/*font-size: 0.8rem;*/
+    text-align: center;
+  }
+
+/*footer*/
+
+  #cart1,
+  #cart2,
+  #cart3,
+  #cart4,
+  #cart5 {
+    display:block;
+    text-align: center;
+    border-bottom: solid 1px rgb(129, 228, 237);
+  }
+
+#connect{
+  display:inline-flex;
+  flex-direction: row;
+  justify-content:center;
+
+}
+
+#copyright span{
+  font-size: 0.6rem;
+}
+
+}
+___________________________________________________
+@media (max-width: 768px){
+
+/*body-section-carousel*/
+  ol.carousel-indicators{
+      display: none;
+  }
+/*body-section-4*/
+  img.d-block.p-4.flex-fill.img-fluid{
+    padding:0;
+  }
+
+
+
+/*footer*/
+
+
+
+}
+
+_____________________________________________________
+/*all*/
+.container-fluid{
+  max-width: 1400px;
+}
+h5, h4, h6 {
+  font: arial, sans-serif;
+  font-weight: bold;
+  color:black;
+}
+
+
+/*header*/
+
+header.container-fluid,
+header.div.container{
+  background-color: rgb(232, 235, 241);
+  box-shadow: 0 2px 3px #aaa;
+}
+
+.navbar.navbar-9 .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=2AACC8');
+}
+
+.navbar-brand img{
+      width: 10rem;
+}
+
+/*body-section-carousel*/
+body div#carousel1{
+  padding-bottom: 5%;
+  padding-top: 1%;
+  background-color: rgb(129, 228, 237);
+  box-shadow: 0 4px 3px #aaa;
+}
+
+.carousel-indicators{
+  position: absolute;
+     bottom: -50px;
+     margin: 0;
+     width: auto;
+}
+
+.carousel-indicators li {
+    background-color: grey;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.carousel-indicators .active{
+       background-color: white;
+}
+
+/*body-section-card*/
+
+div#card2, div.card.border-0, div#section-card {
+  background-color: rgb(232, 235, 241);
+
+}
+
+a.card-link{
+  color: rgb(42, 172, 200);
+}
+
+div.card-text{
+  height: 20vh;
+}
+
+/*body-section-carousel-image*/
+span.carousel-control-next-icon,
+span.carousel-control-prev-icon{
+  background-color: rgb(129, 228, 237);
+  border-radius: 100%;
+  position: absolute;
+  top:0;
+  }
+
+a#prev.carousel-control-prev{
+  left:auto;
+  right: 30px;
+}
+
+.carousel-control-prev-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+
+
+
+/*body-section-4*/
+
+div #section-4 .container {
+  background-color: white;
+}
+
+em,
+em a {
+  font-weight: bold;
+  color:black;
+}
+
+table {
+  background-color: #e8ebf1;
+
+}
+
+.logo-clients:hover{
+  background-color: #f2f2f2;
+}
+
+
+/*body-section-5-donwload*/
+
+.jumbotron {
+  background-color: rgb(232, 252, 234);
+}
+
+
+.btn {
+  background-color: rgb(129, 228, 237);
+}
+
+.btn img {
+  background-color:white;
+  animation-name: charging;
+  animation: charging 0.5s linear 2s infinite alternate;
+}
+@keyframes charging {
+  0%    {background-color:rgb(129, 228, 237);}
+  100%  {background-color:white;}
+}
+
+/*footer*/
+
+#footer.jumbotron-fluid{
+  /*height:40vh;*/
+  background-color: rgb(232, 235, 241);
+  box-shadow: 0 2px 3px #aaa;
+
+}
+
+.card .footer{
+  background-color: rgb(232, 235, 241);
+}
+
+.card{
+  border: none;
+  padding:0;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color black;
+}
+
+ div.card-body.footer a{
+  color:black;
+}
+
+img.animlogo:hover {
+  animation: rotation 1s 1 linear;
+}
+@keyframes rotation {
+     0% {
+       transform: rotate(0deg);
+     }
+    100% {
+       transform: rotate(359deg);
+    }
+}
