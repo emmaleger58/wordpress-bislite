@@ -225,8 +225,16 @@ table {
   color black;
 }
 
+.post{
+  display: flex;
+}
+
  div.card-body.footer a{
   color:black;
+}
+
+.card-img-top{
+  width: auto !important;
 }
 
 img.animlogo:hover {

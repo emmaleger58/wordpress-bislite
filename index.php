@@ -1,4 +1,5 @@
-<?php get_header() ?>
+<?php define('WP_USE_THEMES', false); get_header(); ?>
+
 
 
 <div class="container-fluid -sm-md-lg-xl" id="carousel1">
@@ -42,14 +43,25 @@
         <div class="col-md-6 card border-0" style="width: 18rem;">
           <div class="card-body p-3">
             <div class="row align-items-center p-3 justify-content-around">
+
+              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+               <div class="post">
               <div><img src="<?php bloginfo('template_directory');?>/img/logo-pen.png" class="card-img-top" alt="logo-pen" width="40" height="40"></div>
-              <h6 class="card-title text-uppercase">clean theme</h6>
+              <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
             </div>
-              <div class="card-text overflow-hidden">Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
+              <div class="card-text overflow-hidden">
+
+
+                 <small><?php the_time('F jS, Y'); ?></small>
+
+                 <div class="entry">
+                   <?php the_content(); ?>
+                 </div>
+
+                 <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+                </div> <!-- fin du premier bloc div -->
+
               </div>
               <div class="p-3">
               <i class="fas fa-chevron-right"></i>
@@ -60,15 +72,27 @@
         <div class="col-md-6 card border-0" style="width: 18rem;">
             <div class="card-body p-3">
               <div class="row align-items-center p-3 justify-content-around">
+
+                 <div class="post">
                 <div><img src="<?php bloginfo('template_directory');?>/img/logo-screen.png" class="card-img-top" alt="logo-screen" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase">responsive design</h6>
+                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
               </div>
-              <div class="card-text overflow-hidden">Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-              </div>
+                <div class="card-text overflow-hidden">
+
+
+                   <small><?php the_time('F jS, Y'); ?></small>
+
+                   <div class="entry">
+                     <?php the_content(); ?>
+                   </div>
+
+                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+                  </div> <!-- fin du premier bloc div -->
+
+                  <?php endwhile; else: ?>
+                  <p>Sorry, no posts matched your criteria.</p>
+                  <?php endif; ?>
+                </div>
               <div class="p-3">
               <i class="fas fa-chevron-right"></i>
               <a href="#" class="card-link">Read more</a>
@@ -80,15 +104,31 @@
         <div class="col-md-6 card border-0" style="width: 18rem;">
             <div class="card-body p-3">
               <div class="row align-items-center p-3 justify-content-around">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                 <!-- Si l'Article est dans la Catégorie que nous souhaitons exclure, nous passons à l'Article suivant. -->
+                 <?php if (in_category('3')) continue; ?>
+
+                 <div class="post">
                 <div><img src="<?php bloginfo('template_directory');?>/img/logo-layers.png" class="card-img-top" alt="logo-layers" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase">fully layer psd</h6>
+                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
               </div>
-              <div class="card-text overflow-hidden">Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  Some quick example text to build on the card title and make up the bulk of the card's content.
-              </div>
+                <div class="card-text overflow-hidden">
+
+
+                   <small><?php the_time('F jS, Y'); ?></small>
+
+                   <div class="entry">
+                     <?php the_content(); ?>
+                   </div>
+
+                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+                  </div> <!-- fin du premier bloc div -->
+
+                  <?php endwhile; else: ?>
+                  <p>Sorry, no posts matched your criteria.</p>
+                  <?php endif; ?>
+                </div>
               <div class="p-3">
               <i class="fas fa-chevron-right"></i>
               <a href="#" class="card-link">Read more</a>
@@ -99,11 +139,31 @@
         <div class="col-md-6 card border-0" style="width: 18rem;">
             <div class="card-body p-3">
               <div class="row align-items-center p-3 justify-content-around">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                 <!-- Si l'Article est dans la Catégorie que nous souhaitons exclure, nous passons à l'Article suivant. -->
+                 <?php if (in_category('3')) continue; ?>
+
+                 <div class="post">
                 <div><img src="<?php bloginfo('template_directory');?>/img/logo-paper-plane.png" class="card-img-top" alt="logo-paper-plane" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase">ready for coding</h6>
+                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
               </div>
-              <div class="card-text overflow-hidden">
-              </div>
+                <div class="card-text overflow-hidden">
+
+
+                   <small><?php the_time('F jS, Y'); ?></small>
+
+                   <div class="entry">
+                     <?php the_content(); ?>
+                   </div>
+
+                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+                  </div> <!-- fin du premier bloc div -->
+
+                  <?php endwhile; else: ?>
+                  <p>Sorry, no posts matched your criteria.</p>
+                  <?php endif; ?>
+                </div>
               <div class="p-3">
               <i class="fas fa-chevron-right"></i>
               <a href="#" class="card-link">Read more</a>
