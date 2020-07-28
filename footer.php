@@ -39,14 +39,14 @@
              <h5 class="card-title text-uppercase">connect with us</h5>
              <div class="col-md-12" id="connect">
                <div class="d-flex p-2 justify-content-between align-self-center">
-                 <img src="img/facebook.png" alt="facebook" class="animlogo">
-                 <img src="img/driible.png" alt="driible" class="animlogo">
-                 <img src="img/pinterest.png" alt="pinterest" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/facebook.png" alt="facebook" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/driible.png" alt="driible" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/pinterest.png" alt="pinterest" class="animlogo">
                </div>
                <div class="d-flex p-2 justify-content-between align-self-center">
-                 <img src="img/linkedin.png" alt="linkedin" class="animlogo">
-                 <img src="img/skype.png" alt="skype" class="animlogo">
-                 <img src="img/share.png" alt="share" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/linkedin.png" alt="linkedin" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/skype.png" alt="skype" class="animlogo">
+                 <img src="<?php bloginfo('template_directory');?>/img/share.png" alt="share" class="animlogo">
                </div>
              </div>
            </div>
@@ -56,7 +56,7 @@
      <div class="container">
        <div class="row align-items-center" id="copyright">
          <div class="col-sm col-md-10 h-5"><span>© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are created by Brankic1979.com.</br>Client Logos are copyright and trademark of the respective owners / companies.<span></div>
-         <div class="col-sm col-md-2"><img class="w-100" src= "img/toplogo.png" alt="Logo"/></div>
+         <div class="col-sm col-md-2"><img class="w-100" src="<?php bloginfo('template_directory');?>/img/toplogo.png" alt="Logo"/></div>
        </div>
      </div>
    </div>

@@ -1,5 +1,5 @@
 /*
-Theme Name :Mon theme
+Theme Name: Bislite
 */
 
 
@@ -73,8 +73,7 @@ _____________________________________________________
   max-width: 1400px;
 }
 h5, h4, h6 {
-  font: arial, sans-serif;
-  font-weight: bold;
+  font-weight: bold !important;
   color:black;
 }
 
@@ -104,21 +103,21 @@ body div#carousel1{
 }
 
 .carousel-indicators{
-  position: absolute;
-     bottom: -50px;
+  position: absolute !important;
+     bottom: -50px !important;
      margin: 0;
      width: auto;
 }
 
 .carousel-indicators li {
-    background-color: grey;
-    width: 1rem;
-    height: 1rem;
+    background-color: grey !important;
+    width: 1rem !important;
+    height: 1rem !important;
     border-radius: 100%;
 }
 
 .carousel-indicators .active{
-       background-color: white;
+       background-color: white !important;
 }
 
 /*body-section-card*/
@@ -185,12 +184,12 @@ table {
 /*body-section-5-donwload*/
 
 .jumbotron {
-  background-color: rgb(232, 252, 234);
+  background-color: rgb(232, 252, 234) !important;
 }
 
 
 .btn {
-  background-color: rgb(129, 228, 237);
+  background-color: rgb(129, 228, 237) !important;
 }
 
 .btn img {
@@ -217,8 +216,8 @@ table {
 }
 
 .card{
-  border: none;
-  padding:0;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .card-text {
