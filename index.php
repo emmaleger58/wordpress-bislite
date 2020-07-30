@@ -37,14 +37,17 @@
 
 
 <div class="container-fluid -sm-md-lg-xl shadow p-9" id="card2">
+
   <div class="container" id="section-card">
+
     <div class="card-deck flex-lg-nowrap">
+      <?php $i = 1; if ( have_posts() ) : while ( have_posts()  && $i < 5) : the_post(); ?>
+
       <div class="row w-100 m-0 justify-content-between">
         <div class="col-md-6 card border-0" style="width: 18rem;">
           <div class="card-body p-3">
             <div class="row align-items-center p-3 justify-content-around">
 
-              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                <div class="post">
               <div><img src="<?php bloginfo('template_directory');?>/img/logo-pen.png" class="card-img-top" alt="logo-pen" width="40" height="40"></div>
@@ -62,6 +65,7 @@
                  <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
                 </div> <!-- fin du premier bloc div -->
 
+
               </div>
               <div class="p-3">
               <i class="fas fa-chevron-right"></i>
@@ -69,112 +73,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 card border-0" style="width: 18rem;">
-            <div class="card-body p-3">
-              <div class="row align-items-center p-3 justify-content-around">
 
-                 <div class="post">
-                <div><img src="<?php bloginfo('template_directory');?>/img/logo-screen.png" class="card-img-top" alt="logo-screen" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
-              </div>
-                <div class="card-text overflow-hidden">
-
-
-                   <small><?php the_time('F jS, Y'); ?></small>
-
-                   <div class="entry">
-                     <?php the_content(); ?>
-                   </div>
-
-                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-                  </div> <!-- fin du premier bloc div -->
-
-                  <?php endwhile; else: ?>
-                  <p>Sorry, no posts matched your criteria.</p>
-                  <?php endif; ?>
-                </div>
-              <div class="p-3">
-              <i class="fas fa-chevron-right"></i>
-              <a href="#" class="card-link">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row w-100 m-0 justify-content-between">
-        <div class="col-md-6 card border-0" style="width: 18rem;">
-            <div class="card-body p-3">
-              <div class="row align-items-center p-3 justify-content-around">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-                 <!-- Si l'Article est dans la Catégorie que nous souhaitons exclure, nous passons à l'Article suivant. -->
-                 <?php if (in_category('3')) continue; ?>
-
-                 <div class="post">
-                <div><img src="<?php bloginfo('template_directory');?>/img/logo-layers.png" class="card-img-top" alt="logo-layers" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
-              </div>
-                <div class="card-text overflow-hidden">
-
-
-                   <small><?php the_time('F jS, Y'); ?></small>
-
-                   <div class="entry">
-                     <?php the_content(); ?>
-                   </div>
-
-                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-                  </div> <!-- fin du premier bloc div -->
-
-                  <?php endwhile; else: ?>
-                  <p>Sorry, no posts matched your criteria.</p>
-                  <?php endif; ?>
-                </div>
-              <div class="p-3">
-              <i class="fas fa-chevron-right"></i>
-              <a href="#" class="card-link">Read more</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 card border-0" style="width: 18rem;">
-            <div class="card-body p-3">
-              <div class="row align-items-center p-3 justify-content-around">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-                 <!-- Si l'Article est dans la Catégorie que nous souhaitons exclure, nous passons à l'Article suivant. -->
-                 <?php if (in_category('3')) continue; ?>
-
-                 <div class="post">
-                <div><img src="<?php bloginfo('template_directory');?>/img/logo-paper-plane.png" class="card-img-top" alt="logo-paper-plane" width="40" height="40"></div>
-                <h6 class="card-title text-uppercase"><?php the_title(); ?></h6>
-              </div>
-                <div class="card-text overflow-hidden">
-
-
-                   <small><?php the_time('F jS, Y'); ?></small>
-
-                   <div class="entry">
-                     <?php the_content(); ?>
-                   </div>
-
-                   <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-                  </div> <!-- fin du premier bloc div -->
-
-                  <?php endwhile; else: ?>
-                  <p>Sorry, no posts matched your criteria.</p>
-                  <?php endif; ?>
-                </div>
-              <div class="p-3">
-              <i class="fas fa-chevron-right"></i>
-              <a href="#" class="card-link">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+<?php $i++; endwhile; endif; ?>
+
 </div>
 
+</div>
+
+</div>
 
 
 
